@@ -72,8 +72,9 @@ async function loadJSON(url, options = {}) {
   return fetch(url, options).then((res) => res.json());
 }
 
-function buildURL(url, params) {
-  const _url = new URL(url);
+function buildURL(path, params) {
+  const _url = new URL(window.location.origin);
+  _url.pathname = path;
   if (params) {
     Object.entries(params).forEach((entry) =>
       _url.searchParams.append(...entry)
@@ -96,7 +97,7 @@ export default {
         filter.kind = 'apartment';
       }
       this.properties.loading = true;
-      loadJSON(buildURL('http://localhost:3020/api/properties', filter))
+      loadJSON(buildURL('/api/properties', filter))
         .then((list) => {
           this.properties.list = list;
           this.properties.loading = false;
@@ -118,7 +119,7 @@ export default {
         filter.property = this.selectedProp;
       }
       this.offers.loading = true;
-      loadJSON(buildURL('http://localhost:3020/api/offers', filter))
+      loadJSON(buildURL('/api/offers', filter))
         .then((list) => {
           this.offers.list = list;
           this.offers.loading = false;
