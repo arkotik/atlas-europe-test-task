@@ -1,0 +1,147 @@
+*,
+:before,
+:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  color: #454545;
+}
+
+body {
+  padding: 1rem;
+  font-family: 'Noto Sans', serif;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.no-items {
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.data-section {
+  .heading {
+    text-align: center;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .filters {
+    row-gap: 1rem;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .filter-group {
+      margin-right: 25px;
+
+      label {
+        span {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+#property .info-card {
+  cursor: pointer;
+}
+
+.items-list {
+  display: grid;
+  grid-gap: 1rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.info-card {
+  --card-padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  max-width: 600px;
+  border-radius: 3px;
+  box-shadow: 0 0 10px -2px #787878;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+
+  &.active {
+    box-shadow: 0 0 3px 1px #03a062;
+  }
+
+  .info-header {
+    text-align: center;
+    font-weight: bolder;
+    padding: var(--card-padding);
+    font-size: larger;
+    box-shadow: 0 0 5px -2px;
+  }
+
+  .prop-info {
+    padding: var(--card-padding);
+
+    .card-line {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      line-height: 1.5rem;
+
+      :first-child {
+        font-weight: bolder;
+      }
+
+      &.area :after {
+        content: ' \33A1';
+      }
+
+      & > div {
+        flex-basis: 50%;
+      }
+    }
+  }
+
+  .info-footer {
+    text-align: end;
+    padding: var(--card-padding);
+    border-top: 1px solid #d0d0d0;
+    font-style: italic;
+  }
+}
+
+.muted {
+  color: #878787;
+}
+
+@media (max-width: 300px) {
+  html {
+    font-size: 12px;
+  }
+  body {
+    padding: 1rem;
+  }
+  .items-list {
+    grid-template-columns: 1fr;
+  }
+  .info-card {
+    min-width: unset !important;
+    max-width: unset !important;
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "kind": "House",
+    "location": "New York",
+    "bedrooms": 3,
+    "area": 240
+  },
+  {
+    "id": 2,
+    "kind": "Apartment",
+    "location": "London",
+    "bedrooms": 2,
+    "area": 120
+  },
+  {
+    "id": 3,
+    "kind": "Apartment",
+    "location": "Paris",
+    "bedrooms": 2,
+    "area": 100
+  },
+  {
+    "id": 4,
+    "kind": "Apartment",
+    "location": "Tokyo",
+    "bedrooms": 3,
+    "area": 90
+  },
+  {
+    "id": 5,
+    "kind": "House",
+    "location": "Athens",
+    "bedrooms": 4,
+    "area": 150
+  },
+  {
+    "id": 6,
+    "kind": "Studio",
+    "location": "Berlin",
+    "bedrooms": 1,
+    "area": 70
+  },
+  {
+    "id": 7,
+    "kind": "Villa",
+    "location": "Limassol",
+    "bedrooms": 5,
+    "area": 300
+  },
+  {
+    "id": 8,
+    "kind": "Apartment",
+    "location": "Dubai",
+    "bedrooms": 2,
+    "area": 120
+  },
+  {
+    "id": 9,
+    "kind": "Apartment",
+    "location": "Rome",
+    "bedrooms": 2,
+    "area": 90
+  },
+  {
+    "id": 10,
+    "kind": "Apartment",
+    "location": "Los Angeles",
+    "bedrooms": 2,
+    "area": 105
+  },
+  {
+    "id": 11,
+    "kind": "House",
+    "location": "Barcelona",
+    "bedrooms": 3,
+    "area": 210
+  },
+  {
+    "id": 12,
+    "kind": "Apartment",
+    "location": "Moscow",
+    "bedrooms": 3,
+    "area": 140
+  }
+]
