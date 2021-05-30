@@ -40,4 +40,15 @@ npm run migration:run
 ```shell script
 npm run start:prod
 ```
+Or you can start it in dev mode
+```shell script
+npm run start:dev
+```
 The application will start on [`http://locahost:3020`](http://locahost:3020)
+
+Also, you can start the frontend app in dev mode
+```shell script
+cd client
+npm run serve
+```
+In this case the application will be available on [`http://locahost:8080`](http://locahost:8080)
