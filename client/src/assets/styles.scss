@@ -107,7 +107,7 @@ body {
         font-weight: bolder;
       }
 
-      &.area :after {
+      &.area>:last-child:after {
         content: ' \33A1';
       }
 
